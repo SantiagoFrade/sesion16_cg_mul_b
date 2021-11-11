@@ -64,7 +64,7 @@
 			var diametro =2;
 			var lados = 10;
 			var coneGeometry = new THREE.ConeGeometry(diametro,altura,lados);
-			var basicMaterial = new THREE.MeshLambertMaterial({color: 0xEAEFF2}); // Se  declara la textura del cono
+			var basicMaterial = new THREE.LineBasicMaterial( { color : 0xff0000 } ); // Se  declara la textura del cono
 			var cone = new THREE.Mesh(coneGeometry, basicMaterial); //Se declara el nuevo cono con la geometría y el material
 			scene.add(cone);
 			cone.rotation.set(Math.PI/2, 0, 0);
