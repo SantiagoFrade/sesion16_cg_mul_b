@@ -28,9 +28,9 @@
             controls = new THREE.OrbitControls( camera, renderer.domElement );
 			
 			//ELEMENTOS DE ESCENA
-			var size = 30;
+			var size = 50;
 			var arrowSize = 1;
-			var divisions = size;
+			var divisions = 10;
 			var origin = new THREE.Vector3( 0, 0, 0 );
 			var x = new THREE.Vector3( 1, 0, 0 );
 			var y = new THREE.Vector3( 0, 1, 0 );
@@ -69,9 +69,10 @@
 			var cone = new THREE.Mesh(coneGeometry, basicMaterial); //Se declara el nuevo cono con la geometría y el material
 			scene.add(cone);
 			cone.rotation.set(0, 0, Math.PI/2);
-			cone.position.x=altura/2;
+			cone.position.x=(altura/2);
+			cone.rotation.set(Math.PI/2, 0, Math.PI/2);
 			var eje  = new THREE.Vector3 (0,1,0); // Eje vectorial
-			cone.rotateOnAxis(eje, Math.PI/2); // gire π / 4 alrededor del eje
+
                
 			//AGREGAR A LA ESCENA
 			scene.add( gridHelperXZ );
