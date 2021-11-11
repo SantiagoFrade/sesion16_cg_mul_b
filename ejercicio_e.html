@@ -28,7 +28,7 @@
             controls = new THREE.OrbitControls( camera, renderer.domElement );
 			
 			//ELEMENTOS DE ESCENA
-			var size = 50;
+			var size = 10;
 			var arrowSize = 1;
 			var divisions = 10;
 			var origin = new THREE.Vector3( 0, 0, 0 );
@@ -45,7 +45,7 @@
 			var colorBd = new THREE.Color( 0x6666AA );
 		  
 			//CREAR LAS GRILLAS PARA EL ESCENARIO
-			var axesHelper = new THREE.AxesHelper( size );
+			var axesHelper = new THREE.AxesHelper( 40 );
 			var gridHelperXY = new THREE.GridHelper( size, divisions, color1, color1);
 			var gridHelperXZ = new THREE.GridHelper( size, divisions, color2, color2 );
 			var gridHelperYZ = new THREE.GridHelper( size, divisions, color2, color2 );
@@ -68,10 +68,7 @@
 			var basicMaterial = new THREE.LineBasicMaterial( { color : 0xff0000 } ); // Se  declara la textura del cono
 			var sphere = new THREE.Mesh(SphereGeometry, basicMaterial); //Se declara el nuevo cono con la geometría y el material
 			scene.add(sphere);
-			//cone.rotation.set(0, 0, Math.PI/2);
-			//cone.position.x=(altura/2);
-			//cone.rotation.set(0, 0, (Math.PI/2));
-			//cone.rotateOnAxis(y, Math.PI); // gire π / 5 alrededor del eje
+			sphere.scale.set(0.5,0.5,3);
 
                
 			//AGREGAR A LA ESCENA
