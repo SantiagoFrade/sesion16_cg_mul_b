@@ -75,6 +75,8 @@
 			var x = new THREE.Vector3( 1, 0, 0 );
 			var z = new THREE.Vector3( 0, 0, 1 );
 			sphere.rotateOnAxis( x, -angr );
+			sphere.rotateOnAxis( y, angr );
+			sphere.rotateOnAxis( z, angr );
 			sphere.translateOnAxis( z, 3*(radio));
 			
 			//sphere.rotateOnAxis(x, angr);
